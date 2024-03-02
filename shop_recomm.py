@@ -38,7 +38,10 @@ with st.container():
     st.title("Sentimen Analisis FastText")
     uploaded_file = st.file_uploader("Choose a CSV file")
     if uploaded_file is not None:
-        uploaded_file.getvalue()
+        #folder = "D:\Code\Python\machine_learning\streamlit\data"
+        #path = Path(folder, uploaded_file.name)
+        with open(f"{uploaded_file.name}", mode='wb') as w:
+            w.write(uploaded_file.getvalue())
 
 # ----- Preview data -----   
 with st.container():
