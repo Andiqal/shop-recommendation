@@ -46,7 +46,7 @@ with st.container():
     st.subheader("Preview data")
     
     # 1. Preprocessing
-    df = pd.read_csv(f"data\{uploaded_file.name}")
+    df = pd.read_csv(f"{uploaded_file.name}")
     df.text = df.text.str.replace(r'[^0-9a-zA-Z\s]'," ", regex=True)
     df.text = df.text.str.replace(r'\s+'," ", regex=True)
     df.drop(df[df.text == ""].index, inplace=True)
