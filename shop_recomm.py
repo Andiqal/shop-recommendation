@@ -69,7 +69,7 @@ with st.container():
     st.subheader("Language Modeling")
     # 2. Language Modeling
     # 2.1 Load Model
-    ft_model = FastText.load("ft_model/review_product.fasttext")
+    ft_model = FastText.load("review_product.fasttext")
     ft = ft_model.wv
     st.write(":green[Load Fastext ...] :white_check_mark:")
 
