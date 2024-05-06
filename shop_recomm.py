@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 import nltk
+nltk.download('punkt')
 import streamlit as st
 import os
 import time
