@@ -40,7 +40,7 @@ st.set_page_config(page_title="Analysis App",page_icon=":part_alternation_mark:"
 # ----- Header and Data Input -----
 with st.container():
     st.subheader("Hi, i am qal :wave:")
-    st.title("Sentimen Analisis FastText")
+    st.title("Shop Recommendation using FastText and XGBoost")
     uploaded_file = st.file_uploader("Choose a CSV file")
     if uploaded_file is not None:
         #folder = "D:\Code\Python\machine_learning\streamlit\data"
