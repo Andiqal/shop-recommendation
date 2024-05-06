@@ -24,6 +24,10 @@ from nltk.corpus import stopwords
 
 from gensim.models import FastText
 
+from xgboost import XGBClassifier
+from sklearn.model_selection import RandomizedSearchCV
+from jcopml.tuning import random_search_params as rsp
+
 # Norm Vec Function
 def norm_sent_vector(sentence, ft_model):
     vecs = [ft_model[word.lower()] for word in word_tokenize(sentence)]
