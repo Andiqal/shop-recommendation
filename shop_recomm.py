@@ -70,7 +70,7 @@ with st.container():
     # 2. Language Modeling
     # 2.1 Load Model
     # ft_model = FastText.load("ft_model/review_product.fasttext")
-    sentences = [word_tokenize(text.lower()) for text in tqdm(df.text)]
+    sentences = [word_tokenize(text.lower()) for text in df.text]
     ft_model = FastText(sentences, vector_size=128, window=5, min_count=3, workers=4, epochs=100, sg=0, hs=0)
     ft = ft_model.wv
     st.write(":green[Load Fastext ...] :white_check_mark:")
